@@ -5,7 +5,7 @@
  * Bump this whenever the Todo shape or validation changes.
  * @type {string}
  */
-export const API_VERSION = '1.0.0';
+export const API_VERSION = '1.1.0';
 
 /**
  * A single todo item exchanged between the api and web services.
@@ -13,6 +13,7 @@ export const API_VERSION = '1.0.0';
  * @property {number} id     Unique identifier (assigned by the database).
  * @property {string} title  Human-readable description.
  * @property {boolean} done  Whether the todo has been completed.
+ * @property {"low" | "medium" | "high"} priority  Relative importance of the todo.
  */
 
 /**
@@ -28,6 +29,7 @@ export function validateTodo(value) {
   return (
     typeof t.id === 'number' &&
     typeof t.title === 'string' &&
-    typeof t.done === 'boolean'
+    typeof t.done === 'boolean' &&
+    (t.priority === 'low' || t.priority === 'medium' || t.priority === 'high')
   );
 }

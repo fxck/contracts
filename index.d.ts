@@ -9,6 +9,8 @@ export interface Todo {
   title: string;
   /** Whether the todo has been completed. */
   done: boolean;
+  /** Relative importance of the todo. */
+  priority: "low" | "medium" | "high";
 }
 
 /** Validate that an unknown value conforms to the {@link Todo} shape. */
