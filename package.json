@@ -1,6 +1,6 @@
 {
   "name": "@fxck/contracts",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Shared API contract for the todo rig (plain ESM, no build step)",
   "type": "module",
   "main": "index.js",
