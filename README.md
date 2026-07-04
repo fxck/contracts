@@ -16,7 +16,7 @@ as a git dependency:
 ## Exports
 
 - `API_VERSION` — string constant, the current contract version.
-- `Todo` — the shape of a todo item (`{ id, title, done }`).
+- `Todo` — the shape of a todo item (`{ id, title, done, priority, dueDate }`).
 - `validateTodo(value)` — runtime type guard returning `value is Todo`.
 
 ## Scripts
